@@ -1,0 +1,53 @@
+# NAME: Magpie
+# AUTHOR: wpc6666
+# REPO: https://github.com/wpc6666/Shadowrocket
+# UPDATED: 2026-10-27
+# NOTE: magpie 的本地网关 127.0.0.1:3425 必须直连（见主配置 bypass-tun / skip-proxy）。
+#       本文件为 magpie 依赖的境外域名，供 RULE-SET 引用后走 PROXY。
+# DOMAIN-SUFFIX: 42
+# DOMAIN-KEYWORD: 2
+# TOTAL: 43
+DOMAIN-SUFFIX,usemagpie.ai
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN-SUFFIX,objects.githubusercontent.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,openrouter.ai
+DOMAIN-SUFFIX,together.xyz
+DOMAIN-SUFFIX,fireworks.ai
+DOMAIN-SUFFIX,nvidia.com
+DOMAIN-SUFFIX,nousresearch.com
+DOMAIN-SUFFIX,opencode.ai
+DOMAIN-SUFFIX,cline.bot
+DOMAIN-SUFFIX,commandcode.ai
+DOMAIN-SUFFIX,kilo.ai
+DOMAIN-SUFFIX,pipellm.ai
+DOMAIN-SUFFIX,302.ai
+DOMAIN-SUFFIX,cherryin.ai
+DOMAIN-SUFFIX,yylx.io
+DOMAIN-SUFFIX,aihubmix.com
+DOMAIN-SUFFIX,typesafe.ai
+DOMAIN-SUFFIX,vercel.sh
+DOMAIN-SUFFIX,api.cloudflare.com
+DOMAIN-SUFFIX,ollama.com
+DOMAIN-SUFFIX,factory.ai
+DOMAIN-SUFFIX,ghe.com
+DOMAIN-SUFFIX,moonshot.ai
+DOMAIN-SUFFIX,kimi.ai
+DOMAIN-SUFFIX,minimax.io
+DOMAIN-SUFFIX,stepfun.ai
+DOMAIN-SUFFIX,z.ai
+DOMAIN-SUFFIX,siliconflow.com
+DOMAIN-SUFFIX,dashscope-intl.aliyuncs.com
+DOMAIN-KEYWORD,bedrock-runtime
+DOMAIN-KEYWORD,bedrock-mantle
