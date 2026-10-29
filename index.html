@@ -186,6 +186,7 @@ https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.2
       <tr><td><code>[Proxy Group]</code></td><td>策略组：地区 url-test、AI 自动池和手动选择组</td></tr>
       <tr><td><code>[Rule]</code></td><td>60 条活动规则、26 个规则集：自定义代理优先，随后按 AI / 媒体 / 直连 / CN IP 分流</td></tr>
       <tr><td><code>[URL Rewrite]</code></td><td>Google 重定向与 googlevideo 广告处理（按需启用）</td></tr>
+      <tr><td><code>[MITM]</code></td><td>仅解密 g.cn、google.cn 和 googlevideo.com，配合 URL Rewrite</td></tr>
     </tbody>
   </table></div>
 </div>
@@ -196,7 +197,7 @@ https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.2
     <p><strong>本仓库不含任何节点信息。</strong>只有分流规则和策略组配置，节点需自备（从你自己的机场或自建服务器导入）。</p>
   </div>
   <div class="warn">
-    <p><strong>URL Rewrite 按需启用。</strong>本版不包含 MITM 段。</p>
+    <p><strong>MITM 已配置。</strong>只解密 g.cn、google.cn 和 googlevideo.com；首次使用前请安装并信任证书，不需要时可将 enable 改为 false。</p>
   </div>
   <ul class="nice">
     <li>规则会随上游列表变化，建议每周更新一次。</li>

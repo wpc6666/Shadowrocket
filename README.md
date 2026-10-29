@@ -40,6 +40,7 @@ https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.2
 | `[Proxy Group]` | 14 个策略组：地区测速、AI 自动、手动代理/直连/媒体分组 |
 | `[Rule]` | 60 条活动规则、26 个规则集：自定义代理优先，按 AI / 媒体 / 社交 / 直连 / CN IP 分流 |
 | `[URL Rewrite]` | Google 重定向与 googlevideo 广告处理，按需启用 |
+| `[MITM]` | 仅解密 `g.cn`、`google.cn` 和 `googlevideo.com`，配合 URL Rewrite |
 
 ### 文件
 
@@ -55,7 +56,7 @@ https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.2
 ## ⚠️ 注意事项
 
 - **本仓库不含任何节点信息**。只有分流规则与策略组，节点需自备（从你自己的机场或自建服务导入）。
-- **URL Rewrite 仅在需要时启用**；本版不包含 MITM 段。
+- **MITM 已配置**：只解密 `g.cn`、`google.cn` 和 `googlevideo.com`；首次使用前请安装并信任证书，不需要时可将 `enable` 改为 `false`。
 - **规则会随上游列表变化**，建议每周更新一次。
 - 某站点访问异常时，先检查是不是规则把它判成了「直连」。
 
