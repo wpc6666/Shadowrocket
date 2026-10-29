@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#667eea">
 <title>Shadowrocket 配置 · 白澤 程</title>
-<meta name="description" content="Shadowrocket（小火箭）iOS 代理配置：44 条分流规则、16 个按地区自动测速的策略组、国内+国际双 DNS 防污染、URL 重写与 MITM。一键订阅自动更新。">
+<meta name="description" content="Shadowrocket（小火箭）iOS 代理配置：60 条活动规则、14 个策略组、AI 自动分流、国内 IP/ASN 补强与双 DNS 防污染。">
 <meta name="keywords" content="Shadowrocket,小火箭,iOS代理,分流规则,配置文件,订阅,url-test,DNS防污染">
 <meta name="author" content="白澤 程">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shadowrocket 配置 · 白澤 程">
-<meta property="og:description" content="Shadowrocket（小火箭）iOS 代理配置：44 条分流规则、16 个按地区自动测速的策略组、国内+国际双 DNS 防污染、URL 重写与 MITM。一键订阅自动更新。">
+<meta property="og:description" content="Shadowrocket（小火箭）iOS 代理配置：60 条活动规则、14 个策略组、AI 自动分流、国内 IP/ASN 补强与双 DNS 防污染。">
 <meta property="og:url" content="https://wpc6666.github.io/Shadowrocket/">
 <meta name="twitter:card" content="summary">
 <style>
@@ -144,7 +144,7 @@ footer p+p{margin-top:6px}
   <div class="badges">
     <img src="https://img.shields.io/badge/Platform-iOS-000000?logo=apple&logoColor=white" alt="iOS">
     <img src="https://img.shields.io/badge/App-Shadowrocket-1E90FF" alt="Shadowrocket">
-    <img src="https://img.shields.io/badge/Config-v2025.5.17-2ea44f" alt="版本">
+    <img src="https://img.shields.io/badge/Config-v2026.10.29-2ea44f" alt="版本">
   </div>
   <div class="cta">
     <a class="btn btn-p" href="#subscribe">订阅地址</a>
@@ -155,10 +155,10 @@ footer p+p{margin-top:6px}
 <div class="sec">
   <h2>📦 里面有什么</h2>
   <div class="grid">
-    <div class="feat"><div class="t">🧭 分流规则</div><div class="desc">44 条规则，覆盖常见国内外站点，按域名 / IP 段 / 地区分流。</div></div>
-    <div class="feat"><div class="t">⚖️ 策略组</div><div class="desc">16 个 url-test 自动测速组，按地区（韩国 / 日本 / 美国等）自动选最快节点。</div></div>
+    <div class="feat"><div class="t">🧭 分流规则</div><div class="desc">60 条活动规则、26 个规则集，自定义代理规则优先，国内 IP/ASN 补强。</div></div>
+    <div class="feat"><div class="t">⚖️ 策略组</div><div class="desc">14 个策略组，含地区 url-test、AI 自动池和 DIRECT/PROXY 手动选项。</div></div>
     <div class="feat"><div class="t">🌐 DNS 与防泄漏</div><div class="desc">国内 DoH + 国际 DoH 双通道，含 dns_exclusion_list 防污染。</div></div>
-    <div class="feat"><div class="t">✏️ URL 重写</div><div class="desc">内置 URL Rewrite 与 MITM 段，可按需启用。</div></div>
+    <div class="feat"><div class="t">✏️ URL 重写</div><div class="desc">内置 Google 重定向与 googlevideo 广告处理，按需启用。</div></div>
   </div>
 </div>
 
@@ -171,7 +171,7 @@ footer p+p{margin-top:6px}
     <li>选中刚加的配置 → 打开顶部开关即可。</li>
   </ol>
   <pre><code><span class="cm"># 订阅地址（复制到 Shadowrocket 的 Subscribe）</span>
-https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2025.5.17.conf</code></pre>
+https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.29.conf</code></pre>
   <div class="note">
     <strong>提示</strong>：配置文件里的 <code>update-url</code> 已指向本仓库，App 内点「更新」即可拿到最新版，不用手动重下。
   </div>
@@ -183,10 +183,9 @@ https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2025.5.17
     <thead><tr><th>段落</th><th>作用</th></tr></thead>
     <tbody>
       <tr><td><code>[General]</code></td><td>全局开关：IPv6、DNS、bypass-tun 内网直连、skip-proxy 排除列表</td></tr>
-      <tr><td><code>[Proxy Group]</code></td><td>策略组：按地区做 url-test 自动测速选优</td></tr>
-      <tr><td><code>[Rule]</code></td><td>分流规则：域名 / IP 段 / 地区匹配后走指定策略</td></tr>
-      <tr><td><code>[URL Rewrite]</code></td><td>URL 重写规则（按需启用）</td></tr>
-      <tr><td><code>[MITM]</code></td><td>HTTPS 中间人解密，配合 URL Rewrite 使用</td></tr>
+      <tr><td><code>[Proxy Group]</code></td><td>策略组：地区 url-test、AI 自动池和手动选择组</td></tr>
+      <tr><td><code>[Rule]</code></td><td>60 条活动规则、26 个规则集：自定义代理优先，随后按 AI / 媒体 / 直连 / CN IP 分流</td></tr>
+      <tr><td><code>[URL Rewrite]</code></td><td>Google 重定向与 googlevideo 广告处理（按需启用）</td></tr>
     </tbody>
   </table></div>
 </div>
@@ -197,7 +196,7 @@ https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2025.5.17
     <p><strong>本仓库不含任何节点信息。</strong>只有分流规则和策略组配置，节点需自备（从你自己的机场或自建服务器导入）。</p>
   </div>
   <div class="warn">
-    <p><strong>MITM 与 URL Rewrite 默认关闭。</strong>开启后 App 会解密 HTTPS 流量，请只对你信任的站点启用，并确认已安装并信任证书。</p>
+    <p><strong>URL Rewrite 按需启用。</strong>本版不包含 MITM 段。</p>
   </div>
   <ul class="nice">
     <li>规则会随上游列表变化，建议每周更新一次。</li>
@@ -211,7 +210,8 @@ https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2025.5.17
   <div class="tw"><table>
     <thead><tr><th>文件</th><th>说明</th></tr></thead>
     <tbody>
-      <tr><td><code>2025.5.17.conf</code></td><td>主配置文件，Shadowrocket 直接订阅这个</td></tr>
+      <tr><td><code>2026.10.29.conf</code></td><td>当前主配置文件，Shadowrocket 直接订阅这个</td></tr>
+      <tr><td><code>2025.5.17.conf</code></td><td>历史配置，保留用于回滚</td></tr>
       <tr><td><code>README.md</code></td><td>仓库说明</td></tr>
     </tbody>
   </table></div>
