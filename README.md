@@ -26,6 +26,14 @@ https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.2
 
 保存后下拉更新，选中该配置，打开顶部开关即可。
 
+三策略版（无策略组，只使用 `DIRECT` / `REJECT` / `PROXY`）：
+
+```
+https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.29-policy-only.conf
+```
+
+此版 `SteamCN` 直连，Sony / Nintendo / Epic / Steam / Game 其余游戏平台走代理。
+
 ### 3. 后续更新
 
 配置里的 `update-url` 已指向本仓库，App 内点「更新」就能拿到最新版。
@@ -47,6 +55,7 @@ https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.2
 | 文件 | 说明 |
 |---|---|
 | `2026.10.29.conf` | 主配置文件（快速版，含 `update-url`），Shadowrocket 订阅这个 |
+| `2026.10.29-policy-only.conf` | 三策略版（仅 DIRECT / REJECT / PROXY），SteamCN 直连、其余游戏平台代理 |
 | `2025.5.17.conf` | 历史配置，保留用于回滚 |
 | `index.html` | 在线介绍页（GitHub Pages） |
 | `README.md` | 本文件 |
@@ -67,6 +76,7 @@ https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.2
 ```
 Shadowrocket/
 ├── 2026.10.29.conf  # 当前主配置
+├── 2026.10.29-policy-only.conf  # 三策略版
 ├── 2025.5.17.conf   # 历史配置
 ├── index.html       # 在线介绍页
 └── README.md        # 本文件
