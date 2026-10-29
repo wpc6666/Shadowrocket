@@ -45,7 +45,7 @@ https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.2
 | 段落 | 作用 |
 |---|---|
 | `[General]` | 全局开关：IPv6、DNS 服务器、`bypass-tun` 内网直连、`skip-proxy` 排除列表 |
-| `[Proxy Group]` | 14 个策略组：地区测速、AI 自动、手动代理/直连/媒体分组 |
+| `[Proxy Group]` | 15 个策略组：地区测速、AI 自动、自动故障转移、手动代理/直连/媒体分组 |
 | `[Rule]` | 60 条活动规则、26 个规则集：自定义代理优先，按 AI / 媒体 / 社交 / 直连 / CN IP 分流 |
 | `[URL Rewrite]` | Google 重定向与 googlevideo 广告处理，按需启用 |
 | `[MITM]` | 仅解密 `g.cn`、`google.cn` 和 `googlevideo.com`，配合 URL Rewrite |
