@@ -172,7 +172,7 @@ footer p+p{margin-top:6px}
   </ol>
   <pre><code><span class="cm"># 订阅地址（复制到 Shadowrocket 的 Subscribe）</span>
 https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.29.conf</code></pre>
-  <pre><code><span class="cm"># 三策略版：无策略组，只使用 DIRECT / REJECT / PROXY</span>
+  <pre><code><span class="cm"># 三策略主体 + 自动故障转移兜底</span>
 https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.29-policy-only.conf</code></pre>
   <div class="note">
     <strong>提示</strong>：配置文件里的 <code>update-url</code> 已指向本仓库，App 内点「更新」即可拿到最新版，不用手动重下。
@@ -214,7 +214,7 @@ https://raw.githubusercontent.com/wpc6666/Shadowrocket/refs/heads/main/2026.10.2
     <thead><tr><th>文件</th><th>说明</th></tr></thead>
     <tbody>
       <tr><td><code>2026.10.29.conf</code></td><td>当前主配置文件，Shadowrocket 直接订阅这个</td></tr>
-      <tr><td><code>2026.10.29-policy-only.conf</code></td><td>三策略版：仅 DIRECT / REJECT / PROXY，SteamCN 直连、其余游戏平台代理</td></tr>
+      <tr><td><code>2026.10.29-policy-only.conf</code></td><td>三策略主体 + 自动故障转移兜底；SteamCN 直连、其余游戏平台代理</td></tr>
       <tr><td><code>2025.5.17.conf</code></td><td>历史配置，保留用于回滚</td></tr>
       <tr><td><code>README.md</code></td><td>仓库说明</td></tr>
     </tbody>
